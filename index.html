@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Transition and Animation</title>
+    <style>
+        body{
+            background-color: aqua;
+            border: 2ps solid red;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+            animation: bounce 2s infinite;
+           margin-left: 50%;
+           margin-top: 20%;
+        }
+
+        .box:hover {
+            width: 150px;
+            background-color: red;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(100px);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
